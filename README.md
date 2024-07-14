@@ -70,7 +70,7 @@ QQ群`985508983`
 B站:https://www.bilibili.com/video/BV1hqb3eEEkh/?vd_source=6d82d7bb6e48d85193e2bb7c16eaa41c
 
 ## Python运行环境安装说明（小白版，请严格按照步骤操作）
-1. 首先下载[Windows installer (64-bit)](https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe)，或前往[Python Releases for Windows | Python.org](https://www.python.org/downloads/windows/)下载最新版。
+1. 如果可以打开微软商店的话可以直接搜索并安装Python。如果没有则首先下载[Windows installer (64-bit)](https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe)，或前往[Python Releases for Windows | Python.org](https://www.python.org/downloads/windows/)下载最新版。
 2. 运行安装包并成功安装后，后续操作都将在Windows Powershell中进行。在windows搜索栏（按键盘上的Win键呼出）搜索Windows Powershell，并点击“以管理员身份运行”。
 3. 打开解压后的ZenlessZoneZero-Auto文件夹，选择任意文件夹，点击右键-属性，查看并复制位置信息（一般格式为“C:\\Users\\...\\ZenlessZoneZero-Auto”，...是省略的路径）。在powershell中运行（粘贴并点击回车）
 ``` shell
@@ -79,9 +79,13 @@ B站:https://www.bilibili.com/video/BV1hqb3eEEkh/?vd_source=6d82d7bb6e48d85193e2
 4. 继续[安装教程](#安装教程)第二步，所有的命令都继续在这个Powershell的界面中运行，如果重新打开需要重复一遍步骤3的cd指令。
 
 ## 常见问题（及可能解决方法）
-1. 任何提示“无法将...项识别为...”的提示，如果是git则可以通过直接下载本项目压缩包的形式绕过指令行直接下载，或[下载并安装git](https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe)。
-2. 不知道指令在哪里输入的，或提示”No such file or directory“的，请查看[这里的第二步和第三步](#Python运行环境安装说明（小白版，请严格按照步骤操作）)。
-3. 任何含有“version”这个关键词的错误信息，尝试运行（可以根据需要只选择你安装了的依赖库）
+1. 任何提示“无法将...项识别为...”的提示，如果是git则可以通过直接下载本项目压缩包的形式绕过指令行直接下载，或[下载并安装git](https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe)。如果是python或者pip请参考上一个板块。如果以上都做完了还是没用，则有可能是环境变量的原因，建议自行百度或者进qq群问群友，几句话很难解释清楚。
+2. “No module named xxx”。首先确定自己已经完成了[安装教程](#安装教程)的第二部安装依赖，如果已经完成则尝试用下方指令单独安装依赖库（xxx替换成系统报错缺少的那个名称）。
+   ```shell
+   pip install -r xxx
+	```
+4. 不知道指令在哪里输入的，或提示"No such file or directory"的，请查看[这里的第二步和第三步](#Python运行环境安装说明（小白版，请严格按照步骤操作）)。
+5. 任何含有“version”这个关键词的错误信息，尝试运行（可以根据需要只选择你安装了的依赖库）
    ```shell
 	   pip install --upgrade -r requirements-cuda.txt
 	   pip install --upgrade -r requirements.txt
